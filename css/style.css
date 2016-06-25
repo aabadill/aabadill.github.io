@@ -1,0 +1,26 @@
+.gray {
+	background-color: #444444;
+	border-color: black;
+}
+table {
+	background-color: white;
+}
+
+.matrixSelect {
+	background-color: black;
+}
+.matrixHover {
+	background-color: lightgray;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+#btnClear,
+#btnSend{
+    display: inline-block;
+    vertical-align: top;
+}
+body {
+	background-color: #ff3939;
+}
