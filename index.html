@@ -43,7 +43,8 @@
 			 })
 			
 			var _href = $(this).attr("href");
-			$(this).attr("href", _href + "?data=" + bitString);
+
+			$.ajax({url: href + "?data=" + bitString, success: function(resutl) {} });
 
 		});
 
