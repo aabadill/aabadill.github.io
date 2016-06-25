@@ -15,6 +15,9 @@
    	<script src="js/jmin.js"></script>
 
    <script>
+
+   	var serviceUrl = 'http://10.73.172.156:8000/webapi/emblem';
+
 	$( function() {
 		$('td').click( function() {
 		   	$(this).toggleClass("matrixSelect");
@@ -42,9 +45,7 @@
 
 			 })
 			
-			var _href = $(this).attr("href");
-
-			$.ajax({url: _href + "?data=" + bitString, success: function(resutl) {} });
+			$.ajax({url: serviceUrl + "?data=" + bitString, success: function(resutl) {} });
 
 		});
 
@@ -148,7 +149,7 @@
 						</table>
 						<div class="btn-group btn-group-justified">
 							<a id="clearAll" href="#" class="btn btn-default">Clear All</a>
-							<a id="submit" href="http://10.73.172.156:8000/webapi/emblem" class="btn btn-danger">Submit</a>
+							<a id="submit" href="#" class="btn btn-danger">Submit</a>
 						</div>
                     </div>
                 </div>
