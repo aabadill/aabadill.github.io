@@ -33,7 +33,7 @@
 		});
 
 		$( "#submit" ).click(function() {
-
+			debugger;
 			var bitString = "";
 			$('td').each(function() {
 				
@@ -45,7 +45,7 @@
 
 			 })
 			
-			$.ajax({url: serviceUrl + "?data=" + bitString, success: function(resutl) {} });
+			$.ajax({crossDomain: true, url: serviceUrl + "?data=" + bitString, success: function(resutl) {} });
 
 		});
 
