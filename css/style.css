@@ -12,6 +12,9 @@ table {
 .matrixHover {
 	background-color: lightgray;
 }
+.matrixDefault {
+	background-color: white;
+}
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;

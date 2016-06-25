@@ -22,7 +22,34 @@
 		$('td').hover ( function() {
 		   	$(this).toggleClass("matrixHover");
 		} );
+
+		$( "#clearAll" ).click(function() {
+
+		   	$('td').removeClass("matrixSelect");
+		   	$('td').removeClass("matrixHover");
+		});
+
+		$( "#submit" ).click(function() {
+
+			var bitString = "";
+			$('td').each(function() {
+				
+				if( $(this).hasClass("matrixSelect")) {
+					bitString += "1";
+				} else {
+					bitString += "0";
+				}
+
+			 })
+			
+			var _href = $(this).attr("href");
+			$(this).attr("href", _href + "?data=" + bitString);
+
+		});
+
+
 	} );
+
    </script>
 
 </head>
@@ -115,8 +142,8 @@
 							</tr>
 						</table>
 						<div class="btn-group btn-group-justified">
-							<a href="#" class="btn btn-default">Clear All</a>
-							<a href="#" class="btn btn-danger">Submit</a>
+							<a id="clearAll" href="#" class="btn btn-default">Clear All</a>
+							<a id="submit" href="google.com" class="btn btn-danger">Submit</a>
 						</div>
                     </div>
                 </div>
